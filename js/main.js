@@ -342,3 +342,32 @@ function chunkArray(arr,size){
     return r;
 }
 
+/* ================= WHATSAPP carrito de compras  ================= */
+
+function sendToWhatsApp() {
+
+    const numero = "5213312345678"; // Cambia por tu número
+
+    if (cart.length === 0) {
+        alert("Tu carrito está vacío");
+        return;
+    }
+
+    let mensaje = "¡Hola! Quiero realizar este pedido:\n\n";
+    let total = 0;
+
+    cart.forEach(p => {
+        const subtotal = p.price * p.quantity;
+        total += subtotal;
+
+        mensaje += `📦 ${p.name}\n`;
+        mensaje += `Cantidad: ${p.quantity}\n`;
+        mensaje += `Subtotal: $${subtotal.toLocaleString("es-MX")} MXN\n\n`;
+    });
+
+    mensaje += `💰 TOTAL: $${total.toLocaleString("es-MX")} MXN`;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
+}

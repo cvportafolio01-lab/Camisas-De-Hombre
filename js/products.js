@@ -189,7 +189,7 @@ const RECENT_MODELS = [
 ];
 
 
-const WHATSAPP_NUMBER = "523322373159";
+const WHATSAPP_NUMBER = "523313990776";
 // EXPORTAR (CLAVE)
 window.PRODUCTS = PRODUCTS;
 window.VIDEOS = VIDEOS;
@@ -197,8 +197,8 @@ window.RECENT_MODELS = RECENT_MODELS;
 window.WHATSAPP_NUMBER = WHATSAPP_NUMBER;
 
 const STORE_INFO = {
-    name: "ZEPEDA'S HATS",
-    phone: "33 2237 3159",
+    name: "Camisas Hombre",
+    phone: "3313-990-776",
     whatsapp: WHATSAPP_NUMBER,
     instagram: "https://www.instagram.com/zepeda_hats.mx",
     facebook: "https://www.facebook.com/",
