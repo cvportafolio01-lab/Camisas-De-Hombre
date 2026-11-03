@@ -1353,3 +1353,32 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: 0 2px 6px rgba(0,0,0,0.35);
     }
 }
+/* VISOR DE FOTOGRAFÍAS */
+
+#imageLightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    cursor: zoom-out;
+    padding: 20px;
+}
+
+#imageLightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}

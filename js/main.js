@@ -100,6 +100,34 @@ function renderProducts(filter = "all") {
     });
 }
 
+
+
+
+/* ================= para que se expandan las fotos  ================= */
+
+/* ================= AMPLIAR FOTOGRAFÍAS ================= */
+
+document.getElementById("productsGrid").addEventListener("click", function(e) {
+
+    if (!e.target.classList.contains("product-image")) return;
+
+    const imagen = e.target.src;
+
+    const lightbox = document.createElement("div");
+    lightbox.id = "imageLightbox";
+
+    lightbox.innerHTML = `
+        <span class="lightbox-close">&times;</span>
+        <img src="${imagen}" alt="Fotografía ampliada">
+    `;
+
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener("click", function() {
+        lightbox.remove();
+    });
+
+});
 /* ================= CART ================= */
 
 function renderCart() {
